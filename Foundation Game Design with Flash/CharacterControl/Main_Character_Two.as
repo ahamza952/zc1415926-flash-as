@@ -33,7 +33,7 @@
 			{
 				vx = 5;
 			}
-			else if(event.keyCode == Keyboard.UP)
+			if(event.keyCode == Keyboard.UP)
 			{
 				vy = -5;
 			}

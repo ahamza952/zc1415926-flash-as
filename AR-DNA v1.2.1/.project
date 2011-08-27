@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>AR-DNA v1.2.1</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.adobe.flexbuilder.project.flexbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>[source path] papervision3d_source</name>
+			<type>2</type>
+			<location>D:/papervision3d_source</location>
+		</link>
+		<link>
+			<name>[source path] src</name>
+			<type>2</type>
+			<location>D:/FLARManager/deploy/FLARManager_v1_1_0!/src</location>
+		</link>
+		<link>
+			<name>[source path] tweener_source</name>
+			<type>2</type>
+			<location>D:/tweener_source</location>
+		</link>
+	</linkedResources>
+</projectDescription>

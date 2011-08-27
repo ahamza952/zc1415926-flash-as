@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>AR_Piano1</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.adobe.flexbuilder.project.flexbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>[source path] FLARManager_v1_1_0!-src</name>
+			<type>2</type>
+			<location>D:/FLARManager/deploy/FLARManager_v1_1_0!/src</location>
+		</link>
+		<link>
+			<name>[source path] papervision3d_source-src</name>
+			<type>2</type>
+			<location>D:/papervision3d_source/src</location>
+		</link>
+	</linkedResources>
+</projectDescription>

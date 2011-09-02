@@ -165,9 +165,9 @@ package
 				
 				//pics[i].alpha = 0.5;
 				
-				pics[i].addEventListener(MouseEvent3D.MOUSE_OVER, onMouseOver3D);
-				pics[i].addEventListener(MouseEvent3D.MOUSE_DOWN, onMouseDown3D);
-				pics[i].addEventListener(MouseEvent3D.MOUSE_OUT, onMouseOut3D);
+				pics[i].addEventListener(MouseEvent3D.ROLL_OVER, onMouseOver3D);
+				pics[i].addEventListener(MouseEvent3D.CLICK, onMouseDown3D);
+				pics[i].addEventListener(MouseEvent3D.ROLL_OUT, onMouseOut3D);
 				
 				pivotPicsDO3D.addChild(pics[i]);
 				pivotDO3D.addChild(pivotPicsDO3D);
@@ -210,9 +210,9 @@ package
 			}
 			scene.startRendering();
 			
-			goHome.addEventListener(MouseEvent3D.MOUSE_OVER, onGoHomeOver3D);
-			goHome.addEventListener(MouseEvent3D.MOUSE_OUT, onGoHomeOut3D);
-			goHome.addEventListener(MouseEvent3D.MOUSE_DOWN, onGoHomeDown3D);
+			goHome.addEventListener(MouseEvent3D.ROLL_OVER, onGoHomeOver3D);
+			goHome.addEventListener(MouseEvent3D.ROLL_OUT, onGoHomeOut3D);
+			goHome.addEventListener(MouseEvent3D.CLICK, onGoHomeDown3D);
 			//scene.container.addChild(picxAll[1][2]);//!!!!!!!!!!!!!!!!
 		}
 
@@ -465,51 +465,6 @@ package
 				});
 				showPicxs(uint(plane.name));
 			}
-			
-			
-			
-			/*Tweener.addTween(scene.camera,{
-				rotationZ:scene.camera.rotationZ + 180 * Math.PI / 180,
-				x:0,
-				y:500,
-				z:200,
-				_bezier:[
-					{x:100,y:200,z:300},
-					{x:300,y:0,z:200},
-					{x:300,y:0,z:100},
-				],
-				time:5,
-				transition:"easeInOutCubic",
-				onComplete:setCamera,
-				onCompleteParams:[0,500,200,(scene.camera.rotationX),(scene.camera.rotationY),(scene.camera.rotationZ + 180 * Math.PI / 180)]
-			});*/
-			/*for(var i:uint = 0;i < picxWhichAppearing.length;i++)
-			{
-				if(true == picxWhichAppearing[i])
-				{
-					picxDisappear(i);
-					picxWhichAppearing[i] = false;
-					
-					if(picXml.pic[i].@url == Plane(e.target).name)
-					{
-						return;
-					}
-				}
-			}
-			
-			for(var i:uint = 0;i < picXml.pic.length();i++)
-			{
-				if(picXml.pic[i].@url == Plane(e.target).name)
-				{
-					if(false == picxWhichAppearing[i])
-					{
-						//pivotPicxDO3D.addChild(picxContainer[i]);
-						scene.container.addChild(picxContainer[i]);
-					//	picxAppear(i);
-						picxWhichAppearing[i] = true;
-					}
-				}
-			}*/
 		}
 		
 		private function showPicxs(whichPic:uint, whichPicx:uint = 0):void
@@ -527,9 +482,9 @@ package
 						picxAll[whichPic][whichPicx].y = positionPlanes[whichPicx].y;
 						picxAll[whichPic][whichPicx].z = positionPlanes[whichPicx].z;
 						
-						picxAll[whichPic][whichPicx].addEventListener(MouseEvent3D.MOUSE_OVER, onPicxMouseOver3D);
-						picxAll[whichPic][whichPicx].addEventListener(MouseEvent3D.MOUSE_OUT, onPicxMouseOut3D);
-						picxAll[whichPic][whichPicx].addEventListener(MouseEvent3D.MOUSE_DOWN, onPicxMouseDown3D);
+						picxAll[whichPic][whichPicx].addEventListener(MouseEvent3D.ROLL_OVER, onPicxMouseOver3D);
+						picxAll[whichPic][whichPicx].addEventListener(MouseEvent3D.ROLL_OUT, onPicxMouseOut3D);
+						picxAll[whichPic][whichPicx].addEventListener(MouseEvent3D.CLICK, onPicxMouseDown3D);
 						
 						pivotPicxDO3D.addChild(picxAll[whichPic][whichPicx]);
 					}
@@ -565,9 +520,9 @@ package
 						
 						picxAll[whichPic][whichPicx].alpha = 0;
 						
-						picxAll[whichPic][whichPicx].addEventListener(MouseEvent3D.MOUSE_OVER, onPicxMouseOver3D);
-						picxAll[whichPic][whichPicx].addEventListener(MouseEvent3D.MOUSE_OUT, onPicxMouseOut3D);
-						picxAll[whichPic][whichPicx].addEventListener(MouseEvent3D.MOUSE_DOWN, onPicxMouseDown3D);
+						picxAll[whichPic][whichPicx].addEventListener(MouseEvent3D.ROLL_OVER, onPicxMouseOver3D);
+						picxAll[whichPic][whichPicx].addEventListener(MouseEvent3D.ROLL_OUT, onPicxMouseOut3D);
+						picxAll[whichPic][whichPicx].addEventListener(MouseEvent3D.CLICK, onPicxMouseDown3D);
 						
 						pivotPicxDO3D.addChild(picxAll[whichPic][whichPicx]);
 						
@@ -663,9 +618,9 @@ package
 		 */		
 		private function picxAppear(whichPic:uint,whichPicx:uint = 0):void//要传是几号组（从0开始）的图片作为参数
 		{
-			picxAll[whichPic][whichPicx].addEventListener(MouseEvent3D.MOUSE_OVER, onPicxMouseOver3D);
-			picxAll[whichPic][whichPicx].addEventListener(MouseEvent3D.MOUSE_OUT, onPicxMouseOut3D);
-			picxAll[whichPic][whichPicx].addEventListener(MouseEvent3D.MOUSE_DOWN, onPicxMouseDown3D);
+			picxAll[whichPic][whichPicx].addEventListener(MouseEvent3D.ROLL_OVER, onPicxMouseOver3D);
+			picxAll[whichPic][whichPicx].addEventListener(MouseEvent3D.ROLL_OUT, onPicxMouseOut3D);
+			picxAll[whichPic][whichPicx].addEventListener(MouseEvent3D.CLICK, onPicxMouseDown3D);
 			
 			pivotPicxDO3D.addChild(picxContainer[whichPic]);
 			
@@ -831,9 +786,9 @@ package
 		{
 			for(whichPicx;whichPicx < picXml.pic[whichPic].picx.length();whichPicx++)
 			{
-				picxAll[whichPic][whichPicx].removeEventListener(MouseEvent3D.MOUSE_OVER,onPicxMouseOver3D);
-				picxAll[whichPic][whichPicx].removeEventListener(MouseEvent3D.MOUSE_OUT, onPicxMouseOut3D);
-				picxAll[whichPic][whichPicx].removeEventListener(MouseEvent3D.MOUSE_DOWN, onPicxMouseDown3D);
+				picxAll[whichPic][whichPicx].removeEventListener(MouseEvent3D.ROLL_OVER,onPicxMouseOver3D);
+				picxAll[whichPic][whichPicx].removeEventListener(MouseEvent3D.ROLL_OUT, onPicxMouseOut3D);
+				picxAll[whichPic][whichPicx].removeEventListener(MouseEvent3D.CLICK, onPicxMouseDown3D);
 				
 				picxAll[whichPic][whichPicx].alpha = 0;
 			}
@@ -1089,9 +1044,9 @@ package
 					picxAll[picxWhichPic][whichPicx].rotationX = 0;
 					picxAll[picxWhichPic][whichPicx].rotationY = 0;
 					
-					picxAll[picxWhichPic][whichPicx].removeEventListener(MouseEvent3D.MOUSE_OVER, onPicxMouseOver3D);
-					picxAll[picxWhichPic][whichPicx].removeEventListener(MouseEvent3D.MOUSE_OUT, onPicxMouseOut3D);
-					picxAll[picxWhichPic][whichPicx].removeEventListener(MouseEvent3D.MOUSE_DOWN, onPicxMouseDown3D);
+					picxAll[picxWhichPic][whichPicx].removeEventListener(MouseEvent3D.ROLL_OVER, onPicxMouseOver3D);
+					picxAll[picxWhichPic][whichPicx].removeEventListener(MouseEvent3D.ROLL_OUT, onPicxMouseOut3D);
+					picxAll[picxWhichPic][whichPicx].removeEventListener(MouseEvent3D.CLICK, onPicxMouseDown3D);
 					
 					
 					pivotPicxDO3D.removeChild(picxAll[picxWhichPic][whichPicx]);

@@ -25,6 +25,8 @@ package
 	import caurina.transitions.Tweener;
 	import caurina.transitions.properties.CurveModifiers;
 	
+	import embedmanager.EmbedManager;
+	
 	import flash.display.Loader;
 	import flash.display.Sprite;
 	import flash.events.Event;
@@ -43,6 +45,8 @@ package
 	import flash.system.LoaderContext;
 	import flash.ui.Keyboard;
 	import flash.utils.Timer;
+	
+	import parsers.EmbedXmlParser;
 	
 	import ssnangua.Polygon;
 	
@@ -193,10 +197,6 @@ package
 			
 			scene.onPreRender = function():void {
 				pivotPicsDO3D.rotationZ -= 0.5 * Math.PI / 180;
-			//	pivotPicxDO3D.rotationZ += 0.5 * Math.PI / 180;
-				
-			//	pivotPicxDO3D.rotationZ -= 0.5 * Math.PI / 180;
-					
 				/*if(picClicked == false)一指上去circle就停住不转了
 				{
 					pivotDO3D.rotationZ -= 0.5 * Math.PI / 180;
@@ -218,17 +218,7 @@ package
 
 		private function loadXml():void
 		{
-			var xmlRequest:URLRequest = new URLRequest("./xml/pictures.xml");
-			var xmlLoader:URLLoader = new URLLoader();
-			xmlLoader.dataFormat = URLLoaderDataFormat.TEXT;
-			xmlLoader.addEventListener(Event.COMPLETE, onXmlLoadComplete);
-			xmlLoader.load(xmlRequest);
-		}
-		
-		private function onXmlLoadComplete(e:Event):void
-		{
-			picXml = new XML(e.target.data);
-			trace(picXml);
+			picXml = parsers.EmbedXmlParser.parseEmbedXml(EmbedManager.PicXml);
 			
 			loadPictures();
 			loadSkys();

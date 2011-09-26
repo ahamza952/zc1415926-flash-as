@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>LaMeiZi_project</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.adobe.flexbuilder.flashbridge.flashprobuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.adobe.flexbuilder.flashbridge.flashpronature</nature>
+		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>[source path] src</name>
+			<type>2</type>
+			<location>D:/Libraries/Flint/Flint-src/src</location>
+		</link>
+		<link>
+			<name>src-LaMeiZi_project</name>
+			<type>2</type>
+			<location>F:/Downloads/study/AR/MyProjects/LaMeiZi/project</location>
+		</link>
+	</linkedResources>
+</projectDescription>
